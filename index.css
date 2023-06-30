@@ -1,0 +1,79 @@
+body{
+    
+    background-image: url("bg.webp");
+    background:cover;
+    color:white;
+
+
+}
+
+#main{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+}
+
+#welcome-page{
+    animation: 1s ease-out 0s 1 slide;
+    background-color: rgba(0,0,0, 0.3);
+    backdrop-filter:blur(100px);
+    margin:5px;
+    text-align: center;
+    display:flex;
+    height:auto;
+    border-radius:10px;
+
+}
+
+
+
+#welcome-text{
+    flex-grow: 0.8;
+    word-break: break-all;
+    transition: transform 0.2s ease-in;
+}
+
+@keyframes slide{
+
+    from{transform:translateY(-250%);}
+    to{transform:translate3d(0);}
+}
+
+@keyframes color-change{
+    0% {border: 1.5px solid blue;}
+    25% {border: 1.5px solid white;}
+    50% {border: 1.5px solid blue;}
+    75% {border: 1.5px solid white;}
+    100% {border: 1.5px solid blue;}
+}
+
+
+#welcome-text:hover{
+    transform: translateY(-5px);
+}
+
+
+#welcome-image{
+    border-radius:100000000000000000px;
+    border: 1.5px solid white;
+    column-gap:500px;
+    transition: transform 0.3s ease-out;
+    margin:10px;
+    animation-name:color-change;
+    animation-duration:8s;
+    animation-iteration-count:infinite;
+
+}
+
+#welcome-image:hover{
+    transform: translateY(-5px);
+}
+
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family:'Segoe UI', Tahoma, Geneva, Veranda, sans-serif;
+    margin:10px;
+}
